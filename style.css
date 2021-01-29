@@ -28,6 +28,7 @@
 	width: 22%;
 	cursor: pointer;
 }
+
 #back-button{
 	display: none;
 	color: green;
@@ -38,7 +39,8 @@
 	height: 200px;
 	margin-left: auto;
 	margin-right:auto; 
-	border-radius: 7px;
+	border-top-left-radius: 7px;
+	border-top-right-radius: 7px;
 
 }
 .head{
@@ -80,9 +82,9 @@
 #slideup{
 	color: #eb5942;
 	transition: 0.4s ease-in-out;
-	font-size: 2rem;
+	font-size: 2.5rem;
 	position: fixed;
-	right: 0.5rem;
+	right: 1rem;
 	bottom: 1rem;
 	cursor: pointer;
 	display: none;
@@ -95,7 +97,7 @@
 #div-wrapper-back-button{
 	display: inline-block;
 	cursor: pointer;
-	font-size: 2rem;
+	font-size: 2.5rem;
 	color: #23A93E;
 	transition: 0.4s ease-in-out;
 }
@@ -286,10 +288,6 @@
 		position: relative;
 		left: -4%;
 		top: -2.5rem;
-		font-size: 1.5rem;
-	}
-	#slideup{
-		font-size: 1.5rem;
 	}
 	
 	.div-wrapper{
