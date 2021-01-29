@@ -25,7 +25,7 @@ window.addEventListener('load',()=>{
 	 	boxing.classList.add('main-box');
 	 	
 	 	boxing.innerHTML=
-	 	`<i class="fa fa-arrow-left" aria-hidden="true" id='back-button'>
+	 	`<i class="fas fa-arrow-circle-left" id="back-button"></i>
 	 	</i><img class='image' src=${item['urlToImage']}>
 	 	<h2 class='head'>${item['title']}</h2>
 	 	<p class='des'>${item['description']} </p>
@@ -37,9 +37,8 @@ window.addEventListener('load',()=>{
 
 	
 
-	function interactivity(){
-
-		accord.addEventListener('click',(event)=>{
+	function interactivity(slideup){
+		accord.addEventListener('click',()=>{
 
 	if(event.target.className==='main-box'){
 		var yoff=window.pageYOffset;
@@ -69,8 +68,8 @@ window.addEventListener('load',()=>{
 		})	
 
 	}
-	else if((event.target.nodeName==='IMG')||(event.target.nodeName==='H2')){
-		let yoff=window.pageYOffset;
+	else if((event.target.className==='image')||(event.target.className==='head')){
+		var yoff=window.pageYOffset;
 		window.scrollTo(0,0);
 		let main_div_wrapper=document.createElement('div');
 		main_div_wrapper.classList.add('main-div-wrapper');
@@ -134,7 +133,7 @@ window.addEventListener('load',()=>{
 	
 	
 }
-interactivity();
+interactivity(slideup);
 xhr.send();
 	}
 
